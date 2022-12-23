@@ -1,0 +1,22 @@
+name: Label Issues (Script Injection Example)
+on:
+  issues: #This workflow run on each new github issue is opened
+    types:
+      - opened
+jobs:
+  assign-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign label
+        env: #We added the env section to secure the code from code injection commands
+             #cause the value will be extracted and handle by github and never reach a shell 
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          if [[ "$TITLE" == *"bug"* ]]; then
+          echo "Issue is about a bug!"
+          else
+          echo "Issue is not about a bug"
+          fi
+        #This part of code github.event.issue.title gets
+        # the title of the opened github issue
+        
