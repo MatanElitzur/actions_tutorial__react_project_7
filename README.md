@@ -1,6 +1,7 @@
 # actions_tutorial__react_project_7
 # This repository is used for the security action examples
 1. Script injection example
+   https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#example-of-a-script-injection-attack
 2. Assign permissions to a job 
    1. https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs 
    2. https://docs.github.com/en/actions/security-guides/automatic-token-authentication
