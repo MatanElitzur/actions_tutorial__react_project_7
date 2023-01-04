@@ -16,4 +16,4 @@ jobs:
           echo "Issue is not about a bug"
           fi
         #This part of code github.event.issue.title gets
-        # the title of the opened github issue
+        # the title of the opened github issue 
